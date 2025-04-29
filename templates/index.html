@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color:rgb(177, 203, 216); /* Plain background */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                
+                margin: 0;
+                font-family: Arial, sans-serif;
+              }
+              .form-container {
+                background-color: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                text-align: center;
+              }
+              label {
+                font-weight: bold;
+                display: block;
+                margin-top: 15px;
+              }
+              input[type="text"] {
+                width: 100%;
+                padding: 8px;
+                margin-top: 5px;
+              }
+              input[type="submit"] {
+                margin-top: 20px;
+                padding: 10px 20px;
+                font-weight: bold;
+                cursor: pointer;
+              }
+        </style>
+
+    </head>
+    <body>
+        <div class="form-container">
+        <h1> House Price Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="crime_rate">crime_rate:</label>
+            <input type="floatformat" id="crime_rate" name="crime_rate" default:"0.053"><br><br>
+            <label for="residential_area">residential_area:</label>
+            <input type="floatformat" id="residential_area" name="residential_area" required ><br><br>
+            <label for="age">Age of the house:</label>
+            <input type="number" id="age" name="age" required><br><br>
+            <label for="airport">Airport Nearby:</label>
+            <input type="radio" id="airport_yes" name="airport" value=0>
+            <label for="airport_yes">Yes</label>
+            <input type="radio" id="airport_no" name="airport" value=1 checked>
+            <label for="airport_no">No</label><br>
+            <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
